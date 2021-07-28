@@ -11,7 +11,7 @@ RSpec.describe "Users", type: :request do
       users = create_list(:uiser, 3)
       get users_path
       users.each do |user|
-        expect(response.body).to include(user.title)
+        expect( response.body).to include(user.title)
       end
     end
   end
